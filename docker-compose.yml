@@ -9,5 +9,7 @@ services:
     environment:
       - REDIS_HOST=redis
       - NODE_ENV=production
+      - EXPIRE_SECONDS=604800
+      - BASE_URL=https://send.tommyang.org
   redis:
     image: redis:alpine
