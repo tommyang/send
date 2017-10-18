@@ -1,6 +1,7 @@
 version: "3"
 services:
   web:
+    restart: always
     build: .
     links:
       - redis
@@ -12,4 +13,5 @@ services:
       - EXPIRE_SECONDS=604800
       - BASE_URL=https://send.tommyang.org
   redis:
+    restart: always
     image: redis:alpine
